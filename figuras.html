@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figuras Geometricas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<style>
+  body{
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .content-form{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    margin-top: 50px;
+  }
+  label,h1{
+    text-align: center;
+  }
+  input{
+    padding: 10px;
+    border: none;
+    background-color: rgb(128 128 128 / 21%);
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+  .d-flex{
+    display: flex;
+    flex-direction: column;
+  }
+  .content-buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  button{
+    padding: 10px;
+    border:none;
+    border-radius: 8px;
+    color: #fff;;
+  }
+  .content-buttons button:nth-child(1){
+    background-color: cornflowerblue;
+  }
+  .content-buttons button:nth-child(2){
+    background-color: cadetblue;
+  }
+  .content-buttons button:nth-child(3){
+    background-color: rosybrown;
+  }
+  form{
+    padding: 50px;
+    background: #607d8b24;
+    border-radius: 20px;
+  }
+</style>
+<body>
+  <h1>Figuras Geometricas</h1>
+  <div class="content-form">
+    <!-- Cuadrado -->
+    <form action="">
+      <div class="d-flex">
+        <label for="inputCuadrado">Introduzca el tamano de su Cuadrado</label>
+        <input type="number" id="inputCuadrado">
+        <div class="content-buttons">
+          <button type="button" onclick="calcularPerimetroC();">Calcular el perimetro</button>
+          <button type="button" onclick="calcularAreaC()">Calcular el area</button>
+        </div>
+        <p id="mensajeCuadrado"></p>
+      </div>
+    </form>
+
+    <!-- Triangulo -->
+    <form action="">
+      <div class="d-flex">
+        <label for="inputTriangulo1">Introduzca el tamano de su lado 1</label>
+        <input type="number" id="inputTriangulo1">
+        <label for="inputTriangulo2">Introduzca el tamano de su lado 2</label>
+        <input type="number" id="inputTriangulo2">
+        <label for="inputTrianguloBase">Introduzca el tamano de su base</label>
+        <input type="number" id="inputTrianguloBase">
+        <label for="inputTrianguloAltura">Introduzca el tamano de su altura</label>
+        <input type="number" id="inputTrianguloAltura">
+        <div class="content-buttons">
+          <button type="button" onclick="calcularPerimetroT();">Calcular el perimetro</button>
+          <button type="button" onclick="calcularAreaT()">Calcular el area</button>
+        </div>
+        <p id="mensajeTriangulo"></p>
+      </div>
+    </form>
+
+    <!-- Circulo -->
+    <form action="">
+      <div class="d-flex">
+        <label for="inputCuadrado">Introduzca el tamano de su Circulo</label>
+        <input type="number" id="inputCirculo">
+        <div class="content-buttons">
+          <button type="button" onclick="calcularDiametroCirculo();">Calcular el diametro</button>
+          <button type="button" onclick="calcularPerimetroCirculo();">Calcular el perimetro</button>
+          <button type="button" onclick="calcularAreaCirculo()">Calcular el area</button>
+        </div>
+        <p id="mensajeCirculo"></p>
+      </div>
+    </form>
+  </div>
+  <script src="assets/js/figuras.js"></script>
+</body>
+</html>
