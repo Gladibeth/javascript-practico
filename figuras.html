@@ -8,58 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<style>
-  body{
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .content-form{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 20px;
-    margin-top: 50px;
-  }
-  label,h1{
-    text-align: center;
-  }
-  input{
-    padding: 10px;
-    border: none;
-    background-color: rgb(128 128 128 / 21%);
-    border-radius: 8px;
-    margin: 20px 0;
-  }
-  .d-flex{
-    display: flex;
-    flex-direction: column;
-  }
-  .content-buttons{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-  }
-  button{
-    padding: 10px;
-    border:none;
-    border-radius: 8px;
-    color: #fff;;
-  }
-  .content-buttons button:nth-child(1){
-    background-color: cornflowerblue;
-  }
-  .content-buttons button:nth-child(2){
-    background-color: cadetblue;
-  }
-  .content-buttons button:nth-child(3){
-    background-color: rosybrown;
-  }
-  form{
-    padding: 50px;
-    background: #607d8b24;
-    border-radius: 20px;
-  }
-</style>
 <body>
   <h1>Figuras Geometricas</h1>
   <div class="content-form">
@@ -107,6 +57,25 @@
         </div>
         <p id="mensajeCirculo"></p>
       </div>
+    </form>
+  </div>
+<br>
+  <h1>Tarea triangulo isoceles conseguir altura</h1>
+  <div class="content-form-center">
+    <form action="">
+      <div class="d-flex">
+        <label for="inputIsoceles1">Introduzca su lado 1</label>
+        <input type="number" id="inputIsoceles1">
+        <label for="inputIsoceles2">Introduzca su lado 2</label>
+        <input type="number" id="inputIsoceles2">
+        <label for="inputIsocelesBase">Introduzca su base</label>
+        <input type="number" id="inputIsocelesBase">
+      </div>
+      <div class="content-buttons">
+        <button type="button" onclick="calcularIsoceles();">Calcular altura</button>
+      </div>
+      <p id="mensajeTrianguloIsoceles"></p>
+      <p id="mensajeTrianguloAltura"></p>
     </form>
   </div>
   <script src="assets/js/figuras.js"></script>

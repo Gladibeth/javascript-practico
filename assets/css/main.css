@@ -1,0 +1,63 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.content-form{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 20px;
+  margin-top: 50px;
+}
+label,h1{
+  text-align: center;
+}
+input{
+  padding: 10px;
+  border: none;
+  background-color: rgb(128 128 128 / 21%);
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.d-flex{
+  display: flex;
+  flex-direction: column;
+}
+.content-buttons{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+button{
+  padding: 10px;
+  border:none;
+  border-radius: 8px;
+  color: #fff;;
+}
+.content-buttons button:nth-child(1){
+  background-color: cornflowerblue;
+}
+.content-buttons button:nth-child(2){
+  background-color: cadetblue;
+}
+.content-buttons button:nth-child(3){
+  background-color: rosybrown;
+}
+form{
+  padding: 50px;
+  background: #607d8b24;
+  border-radius: 20px;
+}
+.content-form-center{
+  display: flex;
+  justify-content: center;
+}
+.content-form-center form{
+  width: 50%;
+}
+.content-buttons-center{
+  display: flex;
+  justify-content: center;
+}
+.content-buttons-center button{
+  background-color: cadetblue;
+}

@@ -72,14 +72,14 @@ function calcularPerimetroC(){
   let mensajeC = document.getElementById('mensajeCuadrado');
   let input = document.getElementById('inputCuadrado').value;
   let perimetro = perimetroC(input);
-  mensajeC.innerHTML = `El perimetro de nuestro cuadrado es de ${perimetro}cm`;
+  mensajeC.innerText = `El perimetro de nuestro cuadrado es de ${perimetro}cm`;
 }
 
 function calcularAreaC(){
   let mensajeC = document.getElementById('mensajeCuadrado');
   let input = document.getElementById('inputCuadrado').value;
   let area = areaC(input);
-  mensajeC.innerHTML = `El area de nuestro cuadrado es de ${area}cm^2`;
+  mensajeC.innerText = `El area de nuestro cuadrado es de ${area}cm^2`;
 }
 
 /* Triangulo */
@@ -91,7 +91,7 @@ function calcularPerimetroT(){
   
   
   let perimetroTriangulo = perimetroT(lado1,lado2,base);
-  mensajeT.innerHTML = `El perimetro de nuestro triangulo es de ${perimetroTriangulo}cm`;
+  mensajeT.innerText = `El perimetro de nuestro triangulo es de ${perimetroTriangulo}cm`;
 }
 
 function calcularAreaT(){
@@ -99,7 +99,7 @@ function calcularAreaT(){
   let base = document.getElementById('inputTrianguloBase').value;
   let altura = document.getElementById('inputTrianguloAltura').value;
   let area = areaT(base,altura);
-  mensajeT.innerHTML = `El area de nuestro triangulo es de ${area}cm^2`;
+  mensajeT.innerText = `El area de nuestro triangulo es de ${area}cm^2`;
 }
 
 /* Circulo*/
@@ -107,19 +107,43 @@ function calcularDiametroCirculo(){
   let mensajeC = document.getElementById('mensajeCirculo');
   let input = document.getElementById('inputCirculo').value;
   let diametro = diametroCirculo(input);
-  mensajeC.innerHTML = `El diametro de nuestro circulo es de ${diametro}cm`;
+  mensajeC.innerText = `El diametro de nuestro circulo es de ${diametro}cm`;
 }
 
 function calcularPerimetroCirculo(){
   let mensajeC = document.getElementById('mensajeCirculo');
   let input = document.getElementById('inputCirculo').value;
   let perimetro = perimetroCirculo(input);
-  mensajeC.innerHTML = `El perimetro de nuestro circulo es de ${perimetro}cm`;
+  mensajeC.innerText = `El perimetro de nuestro circulo es de ${perimetro}cm`;
 }
 
 function calcularAreaCirculo(){
   let mensajeC = document.getElementById('mensajeCirculo');
   let input = document.getElementById('inputCirculo').value;
   let area = areaCirculo(input);
-  mensajeC.innerHTML = `El area de nuestro circulo es de ${area}cm^2`;
+  mensajeC.innerText = `El area de nuestro circulo es de ${area}cm^2`;
+}
+
+function isoceles(lado1,lado2,base){
+  let mensajeI = document.getElementById('mensajeTrianguloIsoceles');
+  if(lado1 == lado2 && lado1 != base){
+    mensajeI.innerText = `Es un triangulo Isoceles`;
+    const altura = Math.sqrt(lado1**2 - base**2/ 4)
+    return altura;
+  }else{
+    mensajeI.innerText = `No es un triangulo Isoceles`;
+  }
+}
+
+/* Triangulos isoceles */
+function calcularIsoceles(){
+  let mensajeT = document.getElementById('mensajeTrianguloAltura');
+  let lado1 = document.getElementById('inputIsoceles1').value;
+  let lado2 = document.getElementById('inputIsoceles2').value;
+  let base = document.getElementById('inputIsocelesBase').value;
+  
+  let altura = isoceles(lado1,lado2,base);
+  if (lado1 == lado2){
+    mensajeT.innerText = `La altura de nuestro triangulo isoceles es de ${altura}cm`;
+  }
 }
